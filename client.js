@@ -12,15 +12,13 @@ const connect = function () {
   });
 
   conn.on('connect', () => {
-    console.log("connected to snake server");
+    console.log("connection to snake server established successfully");
+    conn.write(`Name: Ron`);
   });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
   return conn;
 };
-
-
-// connect();
 
 module.exports = connect;
