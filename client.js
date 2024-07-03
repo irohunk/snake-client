@@ -13,8 +13,15 @@ const connect = function () {
 
   conn.on('connect', () => {
     console.log("connection to snake server established successfully");
-    conn.write(`Name: Ron`);
+    conn.write("Name: Ron");
   });
+
+  // conn.on('connect', () => {
+  //   conn.write("Move: up");
+  //   conn.write("Move: left");
+  //   conn.write("Move: down");
+  //   conn.write("Move: right");
+  // });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
