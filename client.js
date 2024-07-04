@@ -16,13 +16,6 @@ const connect = function () {
     conn.write("Name: Ron");
   });
 
-  // conn.on('connect', () => {
-  //   conn.write("Move: up");
-  //   conn.write("Move: left");
-  //   conn.write("Move: down");
-  //   conn.write("Move: right");
-  // });
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
   return conn;
